@@ -24,8 +24,8 @@ jobs:
         run: dotnet test --no-build --verbosity normal
       - name: Echo package
         run: |
-          echo "Running build"
-          dotnet build
+          echo "Packing package"
+          dotnet pack
 
           echo "$PWD"
           file="$PWD/bin/Debug/NugetPubTest.1.0.0.nupkg"
