@@ -24,7 +24,7 @@ jobs:
         run: dotnet test --no-build --verbosity normal
       - name: Echo package
         run: |
-          search_dir=/NugetPubTest/bin/Debug
+          search_dir=/NugetPubTest/bin/Debug/
           for entry in "$search_dir"/*
           do
             echo "$entry"
