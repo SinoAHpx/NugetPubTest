@@ -25,11 +25,17 @@ jobs:
       - name: Echo package
         run: |
           echo "Packing package"
-          dotnet pack -v diag
-
+          cd NugetPubTest
+          dotnet pack
+          
           echo "$PWD"
-          file="$PWD/NugetPubTest/bin/Debug/NugetPubTest.1.0.0.nupkg"
-          echo "$file"
+          file="ruaruarua"
+          for r in *.{nupkg}
+          do
+            file=r
+          done
+          
+          echo "File is: $file"
 
           if [ -e "$file" ]; then
               echo "File exists"
