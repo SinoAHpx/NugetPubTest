@@ -25,7 +25,7 @@ jobs:
       - name: Echo package
         run: |
           echo "Packing package"
-          dotnet pack
+          dotnet pack -v diag
 
           echo "$PWD"
           file="$PWD/bin/Debug/NugetPubTest.1.0.0.nupkg"
