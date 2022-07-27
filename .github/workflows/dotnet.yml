@@ -25,6 +25,6 @@ jobs:
       - name: Echo package
         run: |
           echo "$PWD"
-          if [ ! -f /NugetPubTest/bin/Debug/NugetPubTest.1.0.0.nupkg ]; then
+          if [ ! -f /bin/Debug/NugetPubTest.1.0.0.nupkg ]; then
               echo "File not found!"
           fi
