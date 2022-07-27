@@ -24,10 +24,13 @@ jobs:
         run: dotnet test --no-build --verbosity normal
       - name: Echo package
         run: |
+          echo "Running build"
+          dotnet build
+
           echo "$PWD"
           file="$PWD/bin/Debug/NugetPubTest.1.0.0.nupkg"
           echo "$file"
-          
+
           if [ -e "$file" ]; then
               echo "File exists"
           else 
