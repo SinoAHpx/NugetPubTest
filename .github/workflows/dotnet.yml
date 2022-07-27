@@ -26,6 +26,7 @@ jobs:
           cd NugetPubTest
           dotnet pack
           
+          cd bin/Debug
           echo "$PWD"
           file="ruaruarua"
           for r in *.{nupkg}
