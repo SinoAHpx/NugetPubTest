@@ -28,7 +28,7 @@ jobs:
           dotnet pack -v diag
 
           echo "$PWD"
-          file="$PWD/bin/Debug/NugetPubTest.1.0.0.nupkg"
+          file="$PWD/NugetPubTest/bin/Debug/NugetPubTest.1.0.0.nupkg"
           echo "$file"
 
           if [ -e "$file" ]; then
