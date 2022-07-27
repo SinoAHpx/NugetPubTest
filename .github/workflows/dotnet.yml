@@ -24,8 +24,7 @@ jobs:
         run: dotnet test --no-build --verbosity normal
       - name: Echo package
         run: |
-          search_dir=/NugetPubTest/bin/Debug/
-          for entry in "$search_dir/*"
-          do
-            echo "$entry"
-          done
+          echo "$PWD"
+          if [ ! -f /NugetPubTest/bin/Debug/NugetPubTest.1.0.0.nupkg ]; then
+              echo "File not found!"
+          fi
