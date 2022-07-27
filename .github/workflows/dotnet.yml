@@ -29,9 +29,11 @@ jobs:
           cd bin/Debug
           echo "$PWD"
           file="ruaruarua"
-          for r in *.{nupkg}
+          yourfilenames=`ls ./*.nupkg`
+          for eachfile in $yourfilenames
           do
-            file=$r
+            echo $eachfile
+            file=$eachfile
           done
           
           echo "File is: $file"
